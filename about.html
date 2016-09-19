@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    
+	<title></title>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/canvasjs.min.js"></script>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,800italic,800,700italic,700,600italic,400italic,600,300italic,300|Oswald:400,300,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="https://getbootstrap.com/dist/css/bootstrap.min.css">
+    
+    <script src="js/native.js"></script>
+   
+</head>
+    
+<body>
+    <section id="nav">
+        
+        <div id="myNav" class="overlay">
+            <div class="logo-bla">
+                <img class="blackout" src="img/image.png">
+                <div class="logoText"><p>Office of the</p><p> Chief Economic Assistant</p></div>
+            </div>
+            
+            <div class="overlay-content">
+                <a href="about.html" class="active">Understanding Kwara’s needs</a>
+                <a href="about.html">Helping to manage expenditure</a>
+                <a href="next.html">Supporting IGR</a>
+                <a href="next.html">Devising inclusive social and economic programs</a>
+                
+            </div>
+            <div class="overlay-content-i">
+                <a href="#"><i class="fa fa-linkedin-square fa-3x" aria-hidden="true"></i></a>
+                <a href="#"><i class="fa fa-twitter-square fa-3x" aria-hidden="true"></i></a>
+                <a href="#"><i class="fa fa fa-envelope fa-3x" aria-hidden="true"></i></a>
+            </div>
+        </div>
+        <div class="fullscreen-bg">
+           <img src="img/bg06.jpg" class="fullscreen-bg__img">
+        </div>
+    </section>
+    
+    <section>
+        <div id="main-content">
+            
+            <div id="top">  
+                
+
+                <div class="contentLoad">
+                    <div style="height: 100vh;">
+                        <div class="holderH">
+                            <h1 class="loaded">What is Kwara State’s infrastructure deficit?</h1>
+                            <h2 class="loaded">Kwara State Instructure Investment & Financing Strategy (KIIFS)</h2>
+                        </div>
+
+                        <div class="balan">
+                            <div class="holderPL">
+                                <p class="loaded">KIIFS is a review of the State’s infrastructure needs for inclusive social and economic development.</p>
+                            </div>
+                            <div class="holderPR">
+                                <p class="loaded">KIIFS is a comprehensive and targeted plan to systematically address the infrastructure deficit based on a minimum investment of N60B per investment program<p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contentLoad">
+                    <a href="#" class="small-text"><i class="fa fa-chevron-down fa-3x bounce" aria-hidden="true"></i></a>
+                    <div style="height: 100vh; background:#dadada; margin: 0px 0 0 0;">
+                        <div id="chartContainer"></div>
+                        <div id="chartContainer2" style="width: 60%; height:650px; margin-left: 60%;"></div>
+                        <div class=""></div>
+                    </div>
+                    <div style="height: 100vh; background:#c1c1c1;">
+                        
+                        
+                        <div class="balan">
+                            <div class="holderPLi">
+                                <h1 class="loadedi">Within KWSG control</h1>
+                                <p class="loadedi">Internally Generated Revenue (IGR)<p>
+                                <p class="loadedi">Public Private partnerships<p>
+                                <p class="loadedi">Other internal debt<p>
+                            </div>
+                            <div class="holderPRi">
+                                <h1 class="loadedi">Outside KWSG control</h1>
+                                <p class="loadedi">Bond Issue<p>
+                                <p class="loadedi">Collaboration with FG<p>
+                                <p class="loadedi">Loans and grants from multi-lateral agency, private sector, etc<p>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script type="text/javascript">
+            var chart = new CanvasJS.Chart("chartContainer",
+            {
+                height:800,
+                width:800,
+                animationEnabled: true,
+                legend:{
+                    verticalAlign: "center",
+                    horizontalAlign: "left",
+                    fontSize: 10
+                },
+                backgroundColor: "#dadada",
+                data: [
+                {        
+                    indexLabelFontSize: 10,
+                    indexLabelFontFamily: "Oswald",       
+                    indexLabelFontColor: "#000000", 
+                    indexLabelLineColor: "darkgrey",        
+                    indexLabelPlacement: "outside",
+                    type: "pie",       
+                    showInLegend: true,
+                    legendText: "{indexLabel}",
+                    toolTipContent: "{indexLabel}",
+                    dataPoints: [
+                        {  y: 40, indexLabel: "Education 40%" },
+                        {  y: 26, indexLabel: "Logistics 26%" },
+                        {  y: 13, indexLabel: "Water 13%" },
+                        {  y: 12, indexLabel: "Energy 12%"},
+                        {  y: 5, indexLabel: "Health 5%" },
+                        {  y: 2, indexLabel: "Others 2%"},
+                        {  y: 1, indexLabel: "Sports 1%"}
+                    ]
+                }]
+            });
+            chart.render();
+            chart = {};
+        
+            var charts = new CanvasJS.Chart("chartContainer2", {
+                animationEnabled: true,
+                axisX:{
+                    gridColor: "transparent",
+                    lineColor: "transparent",
+                    valueFormatString: " ",
+                    tickLength: 0,
+                    interval: 2,
+                    gridThickness: 1,
+                    title:"Others",
+                },
+                axisY:{
+                    interval: 1,
+                    valueFormatString: " ",
+                    tickLength: 0,
+                    lineColor: "transparent",
+                    gridColor: "transparent"
+                },
+                backgroundColor: "transparent",
+                data: [{
+                    indexLabelFontSize: 6,
+                    indexLabelFontFamily: "Oswald",       
+                    indexLabelFontColor: "#000000", 
+                    indexLabelLineColor: "darkgrey",        
+                    indexLabelPlacement: "inside",
+                    type: "stackedColumn",      
+                    toolTipContent: "{indexLabel}",
+                    dataPoints: [
+                        { x: 0, y: 0.5, indexLabel: "ICT Enablers 0.5%"},
+                        { x: 0, y: 0.5,indexLabel: "Power infrastructure enabler 0.5%"},
+                        { x: 0, y: 1, indexLabel: "Agriculture Modernization Enabler 1%"}
+                    ]
+                 }]
+            });
+            charts.render();
+            charts = {};
+        
+        $(".small-text").on('click', function(){
+            
+        });
+    </script>
+</body>
+    
+</html>
+
+
